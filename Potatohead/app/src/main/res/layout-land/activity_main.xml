@@ -8,18 +8,16 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.job.potatohead.MainActivity"
-    android:orientation="vertical">
+    android:orientation="horizontal">
 
-    <!-- First of the two LinearLayouts that seperates the screen in the image
-    and checkbox part they are part of another LinearLayout, that is as
-    vertically orientated, which is the same for this layout-->
+    <!-- Works exactly the same as the portrait layout except for the
+    orientation of the top level LinearLayout and the vertical alignment-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="3"
         android:orientation="vertical">
 
-        <!-- The titletext above the Mr. Potatohead image-->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,9 +26,6 @@
             android:textAlignment="center"
             android:id="@+id/title"/>
 
-        <!-- A RelativeLayout that holds all ImageViews that define Mr. Potatohead
-        only imageBody is always visible, the others start off as gone. Everything
-        is centered horizontally-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -136,15 +131,12 @@
         </RelativeLayout>
     </LinearLayout>
 
-    <!-- The second part of the screen holding the CheckBoxes this
-    LinearLayout is also orientated vertically -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="5"
+        android:layout_gravity="center_vertical"
         android:orientation="vertical">
-
-        <!-- This TextView holds the description of the program -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -153,9 +145,6 @@
             android:textAlignment="center"
             android:textColor="#000000" />
 
-        <!-- This TableLayout is horizontally centered and holds all
-        the CheckBoxes and TextViews that indicate the different
-        bodyparts of Mr. Potatohead-->
         <TableLayout
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
